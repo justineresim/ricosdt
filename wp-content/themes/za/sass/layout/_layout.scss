@@ -1,0 +1,42 @@
+/* ==========================================================================
+   General page layout for site
+   ========================================================================== */
+
+.container{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	@media (min-width: 1200px) {
+		width: 1100px;
+	}
+	&:before, &:after {
+	    content: ' ';
+	    display: table;
+	}
+	&:after {
+	    clear: both;
+	}
+	&.sm{
+		@media (min-width: 700px) {
+			width: 700px;
+		}
+	}
+}
+
+main, aside.sidebar{
+	padding-bottom: 6em;
+}
+
+.container{
+	.main-content{
+		width: 55%;
+		float: left;
+	}
+	.main-sidebar{
+		width: 35%;
+		float: right;
+	}
+}
+

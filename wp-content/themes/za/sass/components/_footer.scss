@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Global Footer
+   ========================================================================== */
+
+.footer{
+	background-color: $grey-1;
+	padding: 2em 0;
+	a{
+		color: #fff;
+		text-decoration: none;
+	}
+	@media (max-width: $max-break-mobile) {
+		text-align: center;
+	}
+	.social-icons{
+		font-size: 20px;
+		@media (min-width: $min-break-mobile) {
+			text-align: right;
+		}
+		a{
+			padding: 10px;
+			opacity: .8;
+			display: inline-block;
+			&:hover{
+				opacity: 1;
+			}
+			@media (max-width: $max-break-mobile) {
+				margin: 15px 5px 0;
+			}
+		}
+	}
+	.contact-info{
+		a{
+			font-size: 14px;
+			margin: 12px 40px 0 0;
+	    	font-size: 14px;
+	    	display: inline-block;
+			span{
+				margin-right: 5px;
+			}
+			&:hover{
+				text-decoration: underline;
+			}
+			@media (max-width: $max-break-mobile) {
+				margin: 5px;
+			}
+		}
+	}
+}

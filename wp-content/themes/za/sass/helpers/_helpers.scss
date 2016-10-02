@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Helper Classes
+   ========================================================================== */
+
+//type
+
+.g-text-uppercase{
+	text-transform: uppercase;
+}
+
+.g-font-size-small{
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+.g-font-size-smaller{
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+.g-font-size-smallest{
+	font-size: 0.7em;
+	line-height: 1.4em;
+}
+
+.g-font-size-large{
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+
+.g-font-size-larger{
+	font-size: 1.3em;
+	line-height: 1.4em;
+}
+
+.g-font-size-largest{
+	font-size: 1.4em;
+	line-height: 1.4em;
+}
+
+.g-text-color-primary{
+	color: $text-color;
+}
+
+.g-text-color-light{
+	color: $text-color-light;
+}
+
+.g-text-color-white{
+	color: #fff;
+}
+
+.g-text-color-dark{
+	color: $text-color-dark;
+}
+
+.g-font-normal{
+	font-weight: 300px;
+}
+
+.g-font-bold{
+	font-weight: $body-font-weight-bold;
+}
+
+//links
+
+a.g-link-secondary{
+	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+a.g-link-color-secondary{
+    color: $link-color-secondary;
+    &:hover,
+    &:focus, &:active, &.g-active,{
+      color: $link-hover-color-secondary;
+    }
+}
+
+
+//transitions
+.transition {
+	-webkit-transition: $transition1-default;
+	-moz-transition: $transition1-default;
+	-o-transition: $transition1-default;
+	transition: $transition1-default;
+}
+
+.transition2 {
+	-webkit-transition: $transition2-default;
+	-moz-transition: $transition2-default;
+	-o-transition: $transition2-default;
+	transition: $transition2-default;
+}
+
+.transition3 {
+	-webkit-transition: $transition3-default;
+	-moz-transition: $transition3-default;
+	-o-transition: $transition3-default;
+	transition: $transition3-default;
+}
+
+.box-shadow{
+	-webkit-box-shadow: 1px 1px 2px #666;
+	box-shadow: 1px 1px 2px #666;
+}
+
+.border-radius{
+	border-radius: $border-radius;
+}
+
+.background-gradient{
+	background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent, transparent);
+	background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent, transparent);
+	background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent, transparent);
+	background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent, transparent);
+	background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent, transparent);
+}
+
+.background-gradient2{
+	background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.7), transparent);
+	background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.7), transparent);
+	background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.7), transparent);
+	background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), transparent);
+	background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.7), transparent);
+}
+
+//background-colors
+
+.g-bg-color-primary{
+	background-color: $primary-bg-color;
+}
+
+.g-bg-color-secondary{
+	background-color: $secondary-bg-color;
+}
+
+.g-bg-color-tertiary{
+	background-color: $tertiary-bg-color;
+}
+
+
+//helper classes
+
+.g-pull-right{
+	float: right;
+}
+
+.g-pull-left{
+	float: left;
+}
+
+.g-text-right{
+	text-align: right;
+}
+
+.g-text-left{
+	text-align: left;
+}
+
+.g-text-center{
+	text-align: center;
+}
+
+.g-clearfix{
+	&:before, &:after{
+		content: " ";
+		display: table;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+.g-image-responsive{
+	max-width: 100%;
+}
+
+//responsive helper classes
+
+.g-hidden{
+	display: none;
+}
+
+.g-xs-hidden{
+	@media (max-width: $max-break-mobile) {
+		display: none;
+	}
+}
+
+.g-sm-hidden{
+	@media (min-width: $min-break-mobile) and (max-width: $max-break-tablet) {
+		display: none;
+	}
+}
+
+.g-lg-hidden{
+	@media (min-width: $min-break-tablet) {
+		display: none;
+	}
+}
+
+
+
+
+

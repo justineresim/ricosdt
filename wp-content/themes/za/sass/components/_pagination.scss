@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.g-pagination{
+	a{
+		display: inline-block;
+		width: 2.4em;
+		height: 2.4em;
+		margin: 0 0.2em;
+		border-radius: 50%;
+		background-color: $primary-1;
+		border: 1px solid $primary-1;
+		color: #fff;
+		text-align: center;
+		line-height: 2.2em;
+		text-decoration: none;
+		@extend .transition;
+		&.g-active{
+			background-color: #fff;
+			color: $primary-1;
+			border: 1px solid $primary-1;
+			pointer-events: none;
+		}
+		&:hover{
+			background-color: darken($primary-1, 10%);
+			border: 1px solid darken($primary-1, 10%);
+			text-decoration: none;
+		}
+		&:first-child{
+			margin-left: 0;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}

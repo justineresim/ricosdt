@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.g-btn, button.g-btn, button, .btn, input[type="button"], input[type="submit"]{
+	display: inline-block;
+	padding: $btn-padding;
+	margin-bottom: 0;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
+	text-align: $btn-text-align;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: $btn-primary-bg;
+	border: 1px solid $primary-1;
+	border-radius: $btn-border-radius;
+	font-family: $btn-font-family;
+	color: $btn-primary-color;
+	text-decoration: none;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	@extend .transition;
+	&.g-btn-block{
+		width: 100%;
+	}
+	&.g-btn-sm{
+		padding: $btn-sm-padding;
+		font-size: $btn-sm-font-size;
+		line-height: $btn-sm-line-height;
+		font-weight: normal;
+	}
+	&.g-btn-lg{
+		padding: $btn-lg-padding;
+		font-size: $btn-lg-font-size;
+		line-height: $btn-lg-line-height;
+	}
+	&:hover, &:focus {
+		text-decoration: none;
+		background-color: $btn-primary-hover-bg;
+		border: 1px solid $btn-primary-hover-border;
+		color: $btn-primary-hover-color;
+		outline: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	&:active, &.g-active {
+		text-decoration: none;
+		background-color: $btn-primary-active-bg;
+		border: 1px solid $btn-primary-active-border;
+		color: $btn-primary-hover-color;
+	}
+	&.g-btn-secondary{
+		background-color: $btn-secondary-bg;
+		border: 1px solid $btn-secondary-border;
+		color: $btn-secondary-color;
+		&:hover, &:focus {
+			background-color: $btn-secondary-hover-bg;
+			border: 1px solid $btn-secondary-hover-border;
+			color: $btn-secondary-hover-color;
+		}
+		&:active, &.g-active {
+			background-color: $btn-secondary-active-bg;
+			border: 1px solid $btn-secondary-active-border;
+			color: $btn-secondary-hover-color;
+		}
+	}
+	&.g-btn-tertiary{
+		background-color: $btn-tertiary-bg;
+		border: 1px solid $btn-tertiary-border;
+		color: $btn-tertiary-color;
+		&:hover, &:focus {
+			background-color: $btn-tertiary-hover-bg;
+			border: 1px solid $btn-tertiary-hover-border;
+			color: $btn-tertiary-hover-color;
+		}
+		&:active, &.g-active {
+			background-color: $btn-tertiary-active-bg;
+			border: 1px solid $btn-tertiary-active-border;
+			color: $btn-tertiary-active-color;
+		}
+	}
+	&.g-btn-quaternary{
+		background-color: $btn-quaternary-bg;
+		border: 1px solid $btn-quaternary-border;
+		color: $btn-quaternary-color;
+		&:hover, &:focus {
+			background-color: $btn-quaternary-hover-bg;
+			border: 1px solid $btn-quaternary-hover-border;
+			color: $btn-quaternary-hover-color;
+		}
+		&:active, &.g-active {
+			background-color: $btn-quaternary-active-bg;
+			border: 1px solid $btn-quaternary-active-border;
+			color: $btn-quaternary-active-color;
+		}
+	}
+	&.g-disabled{
+		opacity: .35;
+		pointer-events: none;
+	}
+}
+
+.g-btn-group{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	.g-btn{
+		border-radius: 0;
+		float: left;
+		border-right: 1px solid rgba(0,0,0,.15);
+	}
+	:first-child{
+		border-radius: $btn-border-radius 0 0 $btn-border-radius;
+		margin-left: 0;
+	}
+	:last-child{
+		border-radius: 0 $btn-border-radius $btn-border-radius 0;
+		border-right: none;
+	}
+}
+
+.g-btn-toggle{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	.g-btn{
+		border-radius: 0;
+		float: left;
+	}
+	:first-child{
+		border-radius: $btn-border-radius 0 0 $btn-border-radius;
+		margin-left: 0;
+	}
+	:last-child{
+		border-radius: 0 $btn-border-radius $btn-border-radius 0;
+		margin-left: -1px;
+	}
+}
+
+
+//input with button
+.g-input-btn{
+	position: relative;
+	.g-form-control{
+		padding-right: 100px;
+	}
+	.g-btn{
+		position: absolute;
+		right:0;
+		bottom: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+
+
+
+
+
+

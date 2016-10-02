@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Global Style Guide Page --- This file is just for this testing/style guide site - NOT part pf global CSS
+   ========================================================================== */
+
+.testing{
+	.g-container{
+		position: relative;
+		.testing-body-container{
+			margin-left: 200px;
+			@media (max-width: $max-break-tablet) {
+				margin-left: 0;
+			}
+		}
+		.testing-sidebar{
+			position: fixed;
+			width: 170px;
+			ul.testing-menu{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				text-align: right;
+				li{
+					margin: 0 3px;
+					a{
+						padding: 5px 10px;
+						border-radius: $border-radius;
+						display: inline-block;
+						text-decoration: none;
+						&.active{
+						    text-decoration: underline;
+						}
+					}
+				}
+			}
+			@media (max-width: $max-break-tablet) {
+				display: none;
+			}
+		}
+	}
+	pre{
+		padding: 12px;
+		margin: 1.5em 0 4em;
+		font-size: 15px;
+		line-height: 1.5;
+	    white-space: pre;
+    	overflow-x: auto;
+		color: #333333;
+		background-color: #f5f5f5;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		display: block;
+		font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+		font-weight: normal;
+		xmp{
+			margin: 0;
+		}
+	}
+	.testing-arrow-up{
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		background-color: rgba(0,0,0,.1);
+		z-index: 2000;
+	}
+	.testing-unit{
+		background-color: $grey-2;
+		height: 50px;
+	}
+}
