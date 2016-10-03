@@ -11,8 +11,9 @@ $primary-4: #bf721e;
 
 $grey-1: #1f1f1f;
 $grey-2: #333;
-$grey-3: #b4b4b4;
-$grey-4: #ddd;
+$grey-3: #656565;
+$grey-4: #999999;
+$grey-5: #ddd;
 
 $border-color: $grey-3;
 
@@ -45,8 +46,8 @@ $link-color-secondary: #fff;
 $link-hover-color-secondary: darken(#fff, 5%);
 
 //Type
-$heading-font: "Montserrat",Helvetica,Roboto,Arial,sans-serif;
-$body-font: "Montserrat",Helvetica,Roboto,Arial,sans-serif;
+$heading-font: 'Rubik', sans-serif;
+$body-font: 'Rubik', sans-serif;
 $text-color: $grey-2;
 $text-color-light: $grey-3;
 $text-color-dark: #000;
@@ -55,10 +56,10 @@ $heading-color: $grey-1;
 $heading-link-color: $primary-1;
 $heading-hover-color: darken($primary-1, 10%);
 
-$base-font-size: 13px;
+$base-font-size: 15px;
 $base-line-height: 1.5em;
 
-$body-font-weight-bold: 700;
+$body-font-weight-bold: 500;
 
 /* ======================= Buttons ======================== */
 

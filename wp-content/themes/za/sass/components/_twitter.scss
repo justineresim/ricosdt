@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Twitter widget stying
+   ========================================================================== */
+
+body{
+	li.tweets_avatar{
+		border-radius: 0;
+		padding: 10px !important;
+	}
+	.fetched_tweets > li, .tweet_data {
+	    font-family: $body-font;
+        font: inherit;
+	    font-size: 13.5px;
+	    line-height: 19.8px;
+	    color: $grey-3;
+	}
+
+	.light div.wdtf-screen-name span.screen_name{
+		font-weight: 500;
+	}
+	ul.light li.tweets_avatar .tweet_data{
+		color: $grey-3 !important; 
+	}
+	.fetched_tweets.light .tweets_avatar .tweet_data a {
+	    color: $link-color !important;
+	    &:hover{
+	    	color: $link-hover-color !important;	
+	    }
+	}
+}

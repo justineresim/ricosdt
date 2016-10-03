@@ -24,7 +24,9 @@
 				</div>
 			</div>
 
-			<div class="container sm">
+			<div class="container">
+
+				<div class="main-content">
 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -49,6 +51,14 @@
 				<!-- /article -->
 
 			<?php endif; ?>
+
+				</div>
+
+				<div class="main-sidebar">
+
+					<?php get_sidebar(); ?>
+
+				</div>
 
 			</div>
 

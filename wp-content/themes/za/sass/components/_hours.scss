@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Hours of operation widget
+   ========================================================================== */
+
+.widget_hours_widget{
+	.widget-content{
+		border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
+		border-width: 1px;
+		border-style: solid;
+		box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px;
+		margin-bottom: 15px;
+		padding: 10px;
+		color: $grey-3;
+		@extend .g-font-size-small;
+		> div{
+			@extend .g-clearfix;
+			margin-bottom: 8px;
+		}
+	}
+	.day-label{
+		float: left;
+		width: 95px;
+		font-weight: 500;
+	}
+	.day-hours{
+		float: left;
+	}
+}

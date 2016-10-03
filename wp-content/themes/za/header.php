@@ -29,7 +29,7 @@
         });
         </script>
 
-        <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Great+Vibes|Lato:400,300,700,400italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,700" rel="stylesheet">
 
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all">
 

@@ -24,7 +24,7 @@ Author URI: http://xxxxx.xxx
   text-transform: uppercase;
 }
 
-.g-font-size-small {
+.g-font-size-small, .widget_hours_widget .widget-content {
   font-size: 0.9em;
   line-height: 1.4em;
 }
@@ -49,7 +49,7 @@ Author URI: http://xxxxx.xxx
   line-height: 1.4em;
 }
 
-.g-font-size-largest, body.menu article .entry-meta.wppizza-header-meta {
+.g-font-size-largest {
   font-size: 1.4em;
   line-height: 1.4em;
 }
@@ -59,7 +59,7 @@ Author URI: http://xxxxx.xxx
 }
 
 .g-text-color-light {
-  color: #b4b4b4;
+  color: #656565;
 }
 
 .g-text-color-white {
@@ -75,7 +75,7 @@ Author URI: http://xxxxx.xxx
 }
 
 .g-font-bold {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 a.g-link-secondary {
@@ -170,11 +170,11 @@ a.g-link-color-secondary:hover, a.g-link-color-secondary:focus, a.g-link-color-s
   text-align: center;
 }
 
-.g-clearfix:before, .g-clearfix:after {
+.g-clearfix:before, .widget_hours_widget .widget-content > div:before, .g-clearfix:after, .widget_hours_widget .widget-content > div:after {
   content: " ";
   display: table;
 }
-.g-clearfix:after {
+.g-clearfix:after, .widget_hours_widget .widget-content > div:after {
   clear: both;
 }
 
@@ -419,18 +419,18 @@ html {
 }
 
 body {
-  font-family: "Montserrat", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5em;
   font-weight: 300;
   padding: 0;
   margin: 0;
 }
 body b, body strong {
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (max-width: 580px) {
   body {
@@ -470,7 +470,7 @@ a.g-disabled {
 
 hr {
   border: none;
-  border-top: 1px solid #b4b4b4;
+  border-top: 1px solid #656565;
   margin: 1em 0;
 }
 
@@ -519,7 +519,7 @@ ul ul, ul ol, ol ul, ol ol {
   background-color: #1f1f1f;
   border: 1px solid #1f1f1f;
   border-radius: 2px;
-  font-family: "Montserrat", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #fff;
   text-decoration: none;
   outline: none;
@@ -791,9 +791,9 @@ form .g-form-horizontal .g-checkbox label, form .g-form-horizontal .g-radio labe
   display: block;
   width: 100%;
   padding: 8px 15px;
-  font-size: 13px;
-  line-height: 18.2px;
-  border: 1px solid #b4b4b4;
+  font-size: 15px;
+  line-height: 21px;
+  border: 1px solid #656565;
   border-radius: 4px;
   color: #1f1f1f;
   -webkit-box-shadow: none;
@@ -806,7 +806,7 @@ form .g-form-horizontal .g-checkbox label, form .g-form-horizontal .g-radio labe
   box-shadow: none;
 }
 .g-form-control ::-webkit-input-placeholder, .g-form-control :-moz-placeholder, .g-form-control ::-moz-placeholder, .g-form-control :-ms-input-placeholder, input[type="text"] ::-webkit-input-placeholder, input[type="text"] :-moz-placeholder, input[type="text"] ::-moz-placeholder, input[type="text"] :-ms-input-placeholder, input[type="email"] ::-webkit-input-placeholder, input[type="email"] :-moz-placeholder, input[type="email"] ::-moz-placeholder, input[type="email"] :-ms-input-placeholder, textarea ::-webkit-input-placeholder, textarea :-moz-placeholder, textarea ::-moz-placeholder, textarea :-ms-input-placeholder, select ::-webkit-input-placeholder, select :-moz-placeholder, select ::-moz-placeholder, select :-ms-input-placeholder {
-  color: #b4b4b4;
+  color: #656565;
 }
 
 select.g-form-control, select {
@@ -841,7 +841,7 @@ select.g-form-control, select {
   content: ' ';
   font-size: 20px;
   text-rendering: auto;
-  border: 1px solid #b4b4b4;
+  border: 1px solid #656565;
   height: 20px;
   width: 20px;
   display: inline-block;
@@ -857,7 +857,7 @@ select.g-form-control, select {
 .g-checkbox input[type=checkbox]:checked + label:before {
   content: "\2713";
   color: #1f1f1f;
-  border: 1px solid #b4b4b4;
+  border: 1px solid #656565;
   height: 20px;
   width: 20px;
   font-size: 25px;
@@ -892,7 +892,7 @@ select.g-form-control, select {
 .g-radio-container .g-radio + .g-radio-label:before {
   content: '';
   background: #fff;
-  border: 1px solid #b4b4b4;
+  border: 1px solid #656565;
   display: inline-block;
   vertical-align: middle;
   width: 20px;
@@ -988,6 +988,30 @@ body.home header.header {
 }
 
 /* ==========================================================================
+   Hours of operation widget
+   ========================================================================== */
+.widget_hours_widget .widget-content {
+  border-color: #eeeeee #dddddd #bbbbbb;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px;
+  margin-bottom: 15px;
+  padding: 10px;
+  color: #656565;
+}
+.widget_hours_widget .widget-content > div {
+  margin-bottom: 8px;
+}
+.widget_hours_widget .day-label {
+  float: left;
+  width: 95px;
+  font-weight: 500;
+}
+.widget_hours_widget .day-hours {
+  float: left;
+}
+
+/* ==========================================================================
    Pagination
    ========================================================================== */
 .g-pagination a {
@@ -1024,67 +1048,87 @@ body.home header.header {
 /* ==========================================================================
    Slider
    ========================================================================== */
-.slider .ewd-slide .slideText .slideTitle {
-  letter-spacing: normal;
-  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.7);
-  line-height: 1.1em;
-}
-.slider .ewd-slide .slideText .slideExcerpt {
-  letter-spacing: normal;
-  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.7);
-  line-height: 1.5em;
-  margin-top: 10px;
-}
-
-body.home .ewd-slider-section, body.home .wrapper, body.home .slider, body.home .slider-window, body.home .ewd-slide {
-  height: 100% !important;
-}
-body.home .slider .ewd-slide img, body.home .slideImg {
-  height: 100%;
-  width: auto;
-  max-width: none;
-}
-body.home .slideImg {
-  width: 100%;
-  position: absolute;
+body.home .slider {
   background-size: cover;
   background-position: center center;
-}
-body.home .slider .nav-arrow {
-  top: 0;
-  text-align: right;
-}
-body.home .slider .nav-arrow#left {
-  text-align: left;
-}
-body.home .ewd-us-arrow-div {
-  padding-top: 50px;
-}
-body.home .ewd-slider-control {
   position: absolute;
-  bottom: 100px;
+  top: 0;
+  bottom: 0;
   width: 100%;
 }
-body.home .ewd-slider-control-click {
-  background: #fff;
-}
-body.home .ewd-slide {
+body.home .slider-content-container {
   position: relative;
   display: table;
-  background: #000;
+  width: 100%;
+  height: 100%;
 }
-body.home .ewd-slide .slideText {
+body.home .slider-content-container .slider-content {
   display: table-cell;
   vertical-align: middle;
-  margin: 0;
-  float: none;
-  width: 100%;
-  padding-right: 20%;
-  padding-left: 20%;
-  padding-bottom: 120px;
+  text-align: center;
+  padding-bottom: 100px;
 }
-body.home .ewd-slide .slideText > * {
-  padding: 0 50px;
+body.home .slider-content-container .slider-content h1 {
+  margin: 0;
+}
+body.home .slider-content-container .slider-content h2 {
+  font-size: 20px;
+  font-variant: italic;
+  margin-bottom: 20px;
+}
+body.home .slider-content-container .slider-content h1, body.home .slider-content-container .slider-content h2 {
+  color: #fff;
+  text-shadow: 1px 1px 3px #333;
+}
+body.home .slider-nav {
+  position: absolute;
+  bottom: 120px;
+  width: 100%;
+  text-align: center;
+}
+body.home .slider-nav a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  margin: 8px;
+}
+body.home .slider-nav a:hover, body.home .slider-nav a.active {
+  background-color: #fff;
+}
+body.home .slider-arrows-container {
+  position: absolute;
+  display: table;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+body.home .slider-arrows-container .slider-arrows {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 100px;
+}
+body.home .slider-arrows-container .slider-arrows a {
+  padding: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 40px;
+}
+body.home .slider-arrows-container .slider-arrows a:hover {
+  color: #fff;
+}
+body.home .slider-arrows-container .slider-arrows a.right:hover {
+  padding-right: 25px;
+}
+body.home .slider-arrows-container .slider-arrows a.left:hover {
+  padding-left: 25px;
+}
+body.home .slider-arrows-container.right {
+  text-align: right;
+  left: auto;
+  right: 0;
 }
 
 /* ==========================================================================
@@ -1119,20 +1163,46 @@ table.g-table.g-table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
 }
 table.g-table.g-table-bordered td, table.g-table.g-table-bordered td {
-  border-top: 1px solid #b4b4b4;
+  border-top: 1px solid #656565;
 }
 table.g-table.g-table-hover > tbody > tr:hover {
   background-color: #ababab;
 }
 
 /* ==========================================================================
+   Twitter widget stying
+   ========================================================================== */
+body li.tweets_avatar {
+  border-radius: 0;
+  padding: 10px !important;
+}
+body .fetched_tweets > li, body .tweet_data {
+  font-family: "Rubik", sans-serif;
+  font: inherit;
+  font-size: 13.5px;
+  line-height: 19.8px;
+  color: #656565;
+}
+body .light div.wdtf-screen-name span.screen_name {
+  font-weight: 500;
+}
+body ul.light li.tweets_avatar .tweet_data {
+  color: #656565 !important;
+}
+body .fetched_tweets.light .tweets_avatar .tweet_data a {
+  color: #bf721e !important;
+}
+body .fetched_tweets.light .tweets_avatar .tweet_data a:hover {
+  color: #935817 !important;
+}
+
+/* ==========================================================================
    Type
    ========================================================================== */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Montserrat", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #1f1f1f;
-  font-weight: normal;
-  text-transform: uppercase;
+  font-weight: 500;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
   color: #1f1f1f;
@@ -1145,6 +1215,7 @@ h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:h
 
 h1, .h1 {
   font-size: 5em;
+  font-weight: 700;
 }
 @media (max-width: 580px) {
   h1, .h1 {
@@ -1153,35 +1224,43 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2.9em;
+  font-size: 2.5em;
   text-transform: none;
 }
 @media (max-width: 580px) {
   h2, .h2 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 }
 
 h3, .h3 {
-  font-size: 1.6em;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 h4, .h4 {
-  font-size: 1.4em;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 h5, .h5 {
   font-size: 1em;
   font-weight: bold;
+  font-weight: 400;
 }
 
 h6, .h6 {
   font-size: 1em;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1em;
   margin: 1.4em 0 0.4em;
+}
+
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
+  margin-top: 0;
 }
 
 /* ==========================================================================
@@ -1814,16 +1893,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-main, aside.sidebar {
+main {
   padding-bottom: 6em;
 }
 
+aside.sidebar h3 {
+  margin: 3em 0 1em;
+}
+
 .container .main-content {
-  width: 55%;
+  width: 57%;
   float: left;
 }
 .container .main-sidebar {
-  width: 35%;
+  width: 31%;
   float: right;
 }
 
@@ -1905,49 +1988,8 @@ main, aside.sidebar {
 /* ==========================================================================
    Menu Specific Styles
    ========================================================================== */
-body.menu article {
-  text-align: center;
-}
-body.menu article > * {
-  margin: 1em 0;
-}
-body.menu article h3 {
-  width: 80%;
-  margin-left: 10%;
-  padding-top: 2em;
-  margin-top: 2em;
-  position: relative;
-}
-body.menu article h3:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to left, #fff, #999, #fff);
-  top: 0px;
-  left: 0;
-}
-body.menu article .wppizza-article-info {
-  padding-bottom: 1em;
-}
-body.menu article .wppizza-article-inner {
-  max-width: 500px;
-  margin: 0px auto;
-}
-body.menu article .entry-meta.wppizza-header-meta {
-  font-style: italic;
-}
-
-.g-item-price {
-  display: inline-block;
-  margin: 0 5px;
-}
-
 .secondary-menu {
   background: #bf721e;
-}
-.secondary-menu .wppizza-totals {
-  display: inline-block;
 }
 .secondary-menu a {
   display: block;
@@ -1958,6 +2000,7 @@ body.menu article .entry-meta.wppizza-header-meta {
   color: #fff;
   text-decoration: none;
   float: left;
+  font-weight: 500;
 }
 .secondary-menu a:hover {
   background: rgba(255, 255, 255, 0.2);

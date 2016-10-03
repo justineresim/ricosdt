@@ -25,17 +25,23 @@
 	}
 }
 
-main, aside.sidebar{
+main{
 	padding-bottom: 6em;
+}
+
+aside.sidebar{
+	h3{
+		margin: 3em 0 1em;
+	}
 }
 
 .container{
 	.main-content{
-		width: 55%;
+		width: 57%;
 		float: left;
 	}
 	.main-sidebar{
-		width: 35%;
+		width: 31%;
 		float: right;
 	}
 }

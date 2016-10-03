@@ -7,8 +7,7 @@
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 	font-family: $heading-font;
 	color: $heading-color;
-	font-weight: normal;
-	text-transform: uppercase;
+	font-weight: 500;
 	a{
 		@extend .transition;
 		color: $heading-link-color;
@@ -22,38 +21,47 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 
 h1, .h1{
 	font-size: 5em;
+	font-weight: 700;
 	@media (max-width: $max-break-mobile) {
 		font-size: 3em;
 	}
 }
 
 h2, .h2{
-	font-size: 2.9em;
+	font-size: 2.5em;
 	text-transform: none;
 	@media (max-width: $max-break-mobile) {
-		font-size: 2.2em;
+		font-size: 2em;
 	}
 }
 
 h3, .h3{
-	font-size: 1.6em;
+	font-size: 1.5em;
+	font-weight: 400;
 }
 
 h4, .h4{
-	font-size: 1.4em;
+	font-size: 1em;
+	font-weight: 600;
 }
 
 h5, .h5{
 	font-size: 1em;
 	font-weight: bold;
+	font-weight: 400;
 }
 
 h6, .h6{
 	font-size: 1em;
+	font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6{
 	line-height: 1.1em;
 	margin: 1.4em 0 0.4em;
+}
+
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6{
+	margin-top: 0;
 }
 

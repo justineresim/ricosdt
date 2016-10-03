@@ -23,9 +23,14 @@
                 <hr>
                 <h1>h1 Heading</h1>
                 <h2>h2 Heading</h2>
+                <p>Etiam sagittis gravida odio, eget bibendum neque ultricies non. Quisque venenatis tortor ac bibendum volutpat. Mauris hendrerit finibus lorem quis pharetra. <a>Pellentesque</a> porttitor nulla risus, sit amet molestie massa semper eu. Cras et quam eu risus egestas vulputate. Suspendisse potenti. Cras ut massa efficitur, efficitur enim quis, vulputate magna. Ut at urna eget massa pulvinar dictum vitae tempor nisi. Sed fermentum semper nulla, at malesuada erat accumsan sed.</p>
                 <h3>h3 Heading</h3>
                 <h4>h4 Heading</h4>
+                <p>Etiam sagittis gravida odio, eget bibendum neque ultricies non. Quisque venenatis tortor ac bibendum volutpat. Mauris hendrerit finibus lorem quis pharetra. <b>Pellentesque porttitor</b> nulla risus, sit amet molestie massa semper eu. Cras et quam eu risus egestas vulputate. Suspendisse potenti. Cras ut massa efficitur, efficitur enim quis, vulputate magna. Ut at urna eget massa pulvinar dictum vitae tempor nisi. Sed fermentum semper nulla, at malesuada erat accumsan sed.</p>
+                <hr>
+                <p>Etiam sagittis gravida odio, eget bibendum neque ultricies non. Quisque venenatis tortor ac bibendum volutpat. Mauris hendrerit finibus lorem quis pharetra. <a>Pellentesque</a> porttitor nulla risus, sit amet molestie massa semper eu. Cras et quam eu risus egestas vulputate. Suspendisse potenti. Cras ut massa efficitur, efficitur enim quis, <em>vulputate magna.</em> Ut at urna eget massa pulvinar dictum vitae tempor nisi. Sed fermentum semper nulla, at malesuada erat accumsan sed.</p>
                 <h5>h5 Heading</h5>
+                <p><a>Pellentesque</a> porttitor nulla risus, sit amet molestie massa semper eu. Cras et quam eu risus egestas vulputate. Suspendisse potenti. Cras ut massa efficitur, efficitur enim quis, vulputate magna.</p>
                 <h6>h6 Heading</h6>
 
                 <br>
@@ -43,17 +48,17 @@
                 <p class="g-font-size-larger">Larger body font</p>
                 <p class="g-font-size-largest">Largest body font</p>
 
-    <pre><xmp><p>Regular body font</p>
-    <p class="g-text-color-dark">Dark text color</p>
-    <p class="g-text-color-light">Light text color</p>
-    <p><strong>Bold body font</strong></p>
-    <p><em>Italic body font</em></p>
-    <p class="g-font-size-small">Small body font</p>
-    <p class="g-font-size-smaller">Smaller body font</p>
-    <p class="g-font-size-smallest">Smallest body font</p>
-    <p class="g-font-size-large">Large body font</p>
-    <p class="g-font-size-larger">Larger body font</p>
-    <p class="g-font-size-largest">Largest body font</p></xmp></pre>
+<pre><xmp><p>Regular body font</p>
+<p class="g-text-color-dark">Dark text color</p>
+<p class="g-text-color-light">Light text color</p>
+<p><strong>Bold body font</strong></p>
+<p><em>Italic body font</em></p>
+<p class="g-font-size-small">Small body font</p>
+<p class="g-font-size-smaller">Smaller body font</p>
+<p class="g-font-size-smallest">Smallest body font</p>
+<p class="g-font-size-large">Large body font</p>
+<p class="g-font-size-larger">Larger body font</p>
+<p class="g-font-size-largest">Largest body font</p></xmp></pre>
 
                 <h2 id="links">Links</h2>
                 <hr>
