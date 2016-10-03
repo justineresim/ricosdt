@@ -41,7 +41,8 @@
 
 			<!-- header -->
 			<header class="header">
-				<div class="container">
+
+				<div class="container lg">
 
 					<!-- logo -->
 					<div class="logo">

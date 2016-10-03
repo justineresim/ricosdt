@@ -21,17 +21,15 @@ body.home{
 			vertical-align: middle;
 			text-align: center;
 			padding-bottom: 100px;
-			h1{
-				margin: 0;
-			}
-			h2{
-				font-size: 20px;
-				font-variant: italic;
-				margin-bottom: 20px;
-			}
 			h1, h2{
 				color: #fff;
 				text-shadow: 1px 1px 3px #333;
+			    max-width: 600px;
+    			margin: 0px auto;
+			}
+			h2{
+				font-size: 20px;
+				margin-bottom: 20px;
 			}
 		}
 	}

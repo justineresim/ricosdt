@@ -1,5 +1,9 @@
 			<!-- footer -->
-
+			<div class="g-clearfic g-instagram">
+			<?php
+				echo do_shortcode( '[instagram-feed id="3921311508"]' );
+			?>
+			</div>
 			
 			<footer class="footer" role="contentinfo">
 				<div class="container">

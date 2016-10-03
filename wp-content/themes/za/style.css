@@ -428,6 +428,7 @@ body {
   font-weight: 300;
   padding: 0;
   margin: 0;
+  background: #fbfbfb;
 }
 body b, body strong {
   font-weight: 500;
@@ -470,8 +471,11 @@ a.g-disabled {
 
 hr {
   border: none;
-  border-top: 1px solid #656565;
-  margin: 1em 0;
+  height: 1px;
+  background: linear-gradient(to left, #f7f7f7, #d0d0d0, #f7f7f7);
+  top: 0px;
+  left: 0;
+  margin: 2.5em 0;
 }
 
 p {
@@ -491,8 +495,11 @@ ul ul, ul ol, ol ul, ol ol {
 /* ==========================================================================
    Banner
    ========================================================================== */
+.banner {
+  position: relative;
+}
 .banner h1 {
-  margin: 1.4em 0 1em;
+  margin: 3.4em 0 .8em;
   color: #fff;
   text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.7);
 }
@@ -711,6 +718,15 @@ ul ul, ul ol, ol ul, ol ol {
   }
 }
 
+.g-instagram #sb_instagram {
+  margin-bottom: -10px;
+}
+@media (max-width: 580px) {
+  .g-instagram {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    Global Forms
    ========================================================================== */
@@ -917,9 +933,10 @@ select.g-form-control, select {
    Global Header
    ========================================================================== */
 header.header {
-  background: #1f1f1f;
   z-index: 2000;
   height: 100px;
+  width: 100%;
+  position: absolute;
 }
 @media (max-width: 580px) {
   header.header {
@@ -958,16 +975,16 @@ header.header nav.nav ul li {
   float: left;
 }
 header.header nav.nav ul li a {
-  font-size: 15px;
+  font-size: 19px;
   color: #fff;
   text-decoration: none;
-  background: #1f1f1f;
+  text-shadow: 1px 1px 2px #333;
   display: block;
-  padding: 0 30px;
-  line-height: 100px;
+  padding: 30px 0px 10px 0px;
+  margin-left: 50px;
 }
 header.header nav.nav ul li a:hover {
-  background: #000;
+  border-bottom: 2px solid #fff;
 }
 @media (max-width: 580px) {
   header.header nav.nav ul li a {
@@ -991,6 +1008,7 @@ body.home header.header {
    Hours of operation widget
    ========================================================================== */
 .widget_hours_widget .widget-content {
+  background: #fff;
   border-color: #eeeeee #dddddd #bbbbbb;
   border-width: 1px;
   border-style: solid;
@@ -1001,6 +1019,27 @@ body.home header.header {
 }
 .widget_hours_widget .widget-content > div {
   margin-bottom: 8px;
+}
+.widget_hours_widget .widget-content.Monday .mon {
+  color: #bf721e;
+}
+.widget_hours_widget .widget-content.Tuesday .tues {
+  color: #bf721e;
+}
+.widget_hours_widget .widget-content.Wednesday .wed {
+  color: #bf721e;
+}
+.widget_hours_widget .widget-content.Thursday .thurs {
+  color: #bf721e;
+}
+.widget_hours_widget .widget-content.Friday .fri {
+  color: #bf721e;
+}
+.widget_hours_widget .widget-content.Saturday .sat {
+  color: #bf721e;
+}
+.widget_hours_widget .widget-content.Sunday .sun {
+  color: #bf721e;
 }
 .widget_hours_widget .day-label {
   float: left;
@@ -1068,17 +1107,15 @@ body.home .slider-content-container .slider-content {
   text-align: center;
   padding-bottom: 100px;
 }
-body.home .slider-content-container .slider-content h1 {
-  margin: 0;
-}
-body.home .slider-content-container .slider-content h2 {
-  font-size: 20px;
-  font-variant: italic;
-  margin-bottom: 20px;
-}
 body.home .slider-content-container .slider-content h1, body.home .slider-content-container .slider-content h2 {
   color: #fff;
   text-shadow: 1px 1px 3px #333;
+  max-width: 600px;
+  margin: 0px auto;
+}
+body.home .slider-content-container .slider-content h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 body.home .slider-nav {
   position: absolute;
@@ -1871,13 +1908,18 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
 }
-@media (min-width: 1200px) {
+@media (max-width: 780px) {
   .container {
-    width: 1100px;
+    max-width: 660px;
+  }
+}
+@media (min-width: 1100px) {
+  .container {
+    width: 1050px;
   }
 }
 .container:before, .container:after {
@@ -1892,9 +1934,29 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
     width: 700px;
   }
 }
+@media (min-width: 1100px) {
+  .container.lg {
+    width: 1050px;
+  }
+}
+@media (min-width: 1200px) {
+  .container.lg {
+    width: 1150px;
+  }
+}
+@media (min-width: 1300px) {
+  .container.lg {
+    width: 1250px;
+  }
+}
+@media (min-width: 1400px) {
+  .container.lg {
+    width: 1350px;
+  }
+}
 
 main {
-  padding-bottom: 6em;
+  padding-bottom: 4em;
 }
 
 aside.sidebar h3 {
@@ -1905,9 +1967,28 @@ aside.sidebar h3 {
   width: 57%;
   float: left;
 }
+@media (max-width: 780px) {
+  .container .main-content {
+    width: 100%;
+    float: none;
+  }
+}
 .container .main-sidebar {
   width: 31%;
   float: right;
+}
+@media (max-width: 780px) {
+  .container .main-sidebar {
+    width: 100%;
+    float: none;
+    border-top: 2px solid #656565;
+    margin-top: 4em;
+  }
+}
+@media (max-width: 780px) {
+  .container .main-sidebar .sidebar {
+    max-width: 400px;
+  }
 }
 
 /* ==========================================================================
@@ -1988,35 +2069,17 @@ aside.sidebar h3 {
 /* ==========================================================================
    Menu Specific Styles
    ========================================================================== */
-.secondary-menu {
-  background: #bf721e;
-}
 .secondary-menu a {
   display: block;
-  line-height: 45px;
-  padding: 0 20px;
-  text-transform: uppercase;
+  margin: 30px 40px 0 0;
+  padding-bottom: 5px;
   font-size: 14px;
-  color: #fff;
   text-decoration: none;
   float: left;
   font-weight: 500;
 }
-.secondary-menu a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-.secondary-menu a.active {
-  background: rgba(255, 255, 255, 0.25);
-}
-.secondary-menu a.g-pull-right {
-  float: right;
-  background: rgba(255, 255, 255, 0.1);
-}
-.secondary-menu a.g-pull-right:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-.secondary-menu a.g-pull-right.active {
-  background: rgba(255, 255, 255, 0.25);
+.secondary-menu a.active, .secondary-menu a:hover {
+  border-bottom: 2px solid #bf721e;
 }
 
 .tab-content {

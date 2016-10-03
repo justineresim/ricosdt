@@ -4,6 +4,7 @@
 
 .widget_hours_widget{
 	.widget-content{
+		background: #fff;
 		border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
 		border-width: 1px;
 		border-style: solid;
@@ -15,6 +16,41 @@
 		> div{
 			@extend .g-clearfix;
 			margin-bottom: 8px;
+		}
+		&.Monday{
+			.mon{
+				color: $primary-4;
+			}
+		}
+		&.Tuesday{
+			.tues{
+				color: $primary-4;
+			}
+		}
+		&.Wednesday{
+			.wed{
+				color: $primary-4;
+			}
+		}
+		&.Thursday{
+			.thurs{
+				color: $primary-4;
+			}
+		}
+		&.Friday{
+			.fri{
+				color: $primary-4;
+			}
+		}
+		&.Saturday{
+			.sat{
+				color: $primary-4;
+			}
+		}
+		&.Sunday{
+			.sun{
+				color: $primary-4;
+			}
 		}
 	}
 	.day-label{

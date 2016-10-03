@@ -36,16 +36,19 @@ class My_Widget extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
+
+		date_default_timezone_set('Canada/Eastern');
+		$day = date("l");
 	
      	echo $args['before_widget'];
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		}
 
-		echo '<div class="widget-content">';
+		echo '<div class="widget-content ' . $day . '">';
 		
 		if ( ! empty( $instance['mon'] ) ) {
-			echo '<div>';
+			echo '<div class="mon">';
 			echo '<div class="day-label">Monday:</div>';
 			echo '<div class="day-hours">';
 			echo $args['before_mon'] . apply_filters( 'widget_mon', $instance['mon'] ). $args['after_mon'];
@@ -53,7 +56,7 @@ class My_Widget extends WP_Widget {
 			echo '</div>';
 		}
 		if ( ! empty( $instance['tues'] ) ) {
-			echo '<div>';
+			echo '<div class="tues">';
 			echo '<div class="day-label">Tuesday:</div>';
 			echo '<div class="day-hours">';
 			echo $args['before_tues'] . apply_filters( 'widget_tues', $instance['tues'] ). $args['after_tues'];
@@ -61,7 +64,7 @@ class My_Widget extends WP_Widget {
 			echo '</div>';
 		}
 		if ( ! empty( $instance['wed'] ) ) {
-			echo '<div>';
+			echo '<div class="wed">';
 			echo '<div class="day-label">Wednesday:</div>';
 			echo '<div class="day-hours">';
 			echo $args['before_wed'] . apply_filters( 'widget_wed', $instance['wed'] ). $args['after_wed'];
@@ -69,7 +72,7 @@ class My_Widget extends WP_Widget {
 			echo '</div>';
 		}
 		if ( ! empty( $instance['thurs'] ) ) {
-			echo '<div>';
+			echo '<div class="thurs">';
 			echo '<div class="day-label">Thursday:</div>';
 			echo '<div class="day-hours">';
 			echo $args['before_thurs'] . apply_filters( 'widget_thurs', $instance['thurs'] ). $args['after_thurs'];
@@ -77,7 +80,7 @@ class My_Widget extends WP_Widget {
 			echo '</div>';
 		}
 		if ( ! empty( $instance['fri'] ) ) {
-			echo '<div>';
+			echo '<div class="fri">';
 			echo '<div class="day-label">Friday:</div>';
 			echo '<div class="day-hours">';
 			echo $args['before_fri'] . apply_filters( 'widget_fri', $instance['fri'] ). $args['after_fri'];
@@ -85,7 +88,7 @@ class My_Widget extends WP_Widget {
 			echo '</div>';
 		}
 		if ( ! empty( $instance['sat'] ) ) {
-			echo '<div>';
+			echo '<div class="sat">';
 			echo '<div class="day-label">Saturday:</div>';
 			echo '<div class="day-hours">';
 			echo $args['before_sat'] . apply_filters( 'widget_sat', $instance['sat'] ). $args['after_sat'];
@@ -93,7 +96,7 @@ class My_Widget extends WP_Widget {
 			echo '</div>';
 		}
 		if ( ! empty( $instance['sun'] ) ) {
-			echo '<div>';
+			echo '<div class="sun">';
 			echo '<div>';
 			echo '<div class="day-label">Sunday:</div>';
 			echo '<div class="day-hours">';

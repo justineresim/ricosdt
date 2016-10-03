@@ -3,32 +3,16 @@
    ========================================================================== */
 
 .secondary-menu{
-	background: $primary-4;
 	a{
 		display: block;
-		line-height: 45px;
-		padding: 0 20px;
-		text-transform: uppercase;
+		margin: 30px 40px 0 0;
+		padding-bottom: 5px;
 		font-size: 14px;
-		color: #fff;
 		text-decoration: none;
 		float: left;
 		font-weight: 500;
-		&:hover{
-			background: rgba(255,255,255,.2);
-		}
-		&.active{
-			background: rgba(255,255,255,.25);
-		}
-		&.g-pull-right{
-			float: right;
-			background: rgba(255,255,255,.1);
-			&:hover{
-				background: rgba(255,255,255,.2);
-			}
-			&.active{
-				background: rgba(255,255,255,.25);
-			}
+		&.active, &:hover{
+			border-bottom: 2px solid $link-color;
 		}
 	}
 }
