@@ -19,6 +19,7 @@ jQuery(document).ready(function($) {
 		$(this).siblings().removeClass('active');
 		$(slide).addClass('active');
 		$(slide).siblings().removeClass('active');
+		startLoop();
 	});
 
 	function nextSlide(){
@@ -32,6 +33,7 @@ jQuery(document).ready(function($) {
 		$(nav).siblings().removeClass('active');
 		$(slide).addClass('active');
 		$(slide).siblings().removeClass('active');
+		startLoop();
 	}
 
 	function prevSlide(){
@@ -45,6 +47,7 @@ jQuery(document).ready(function($) {
 		$(nav).siblings().removeClass('active');
 		$(slide).addClass('active');
 		$(slide).siblings().removeClass('active');
+		startLoop();
 	}
 
 	$('a.right').click(function(event){
@@ -57,6 +60,17 @@ jQuery(document).ready(function($) {
 
 	$( ".slider " ).on( "swipeleft", nextSlide );
 	$( ".slider " ).on( "swiperight", prevSlide );
+
+	var iFrequency = 7000; // expressed in miliseconds
+	var myInterval = 0;
+
+	// STARTS and Resets the loop if any
+	function startLoop() {
+	    if(myInterval > 0) clearInterval(myInterval);  // stop
+	    myInterval = setInterval( nextSlide, iFrequency );  // run
+	}
+
+	startLoop();
 	
 });
 
