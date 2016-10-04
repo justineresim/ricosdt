@@ -1,46 +1,81 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
-
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<div class="slider" style="background-image: url('https://s-media-cache-ak0.pinimg.com/originals/95/54/38/95543815b0002e6da1c9c044f0154a0d.jpg')">
+<div>
 
-			<div class="slider-content-container">
-				<div class="slider-content">
-				<h1>Eat some Za</h1>
-				<h2>Delicious thin crust pizza</h2>
-				<a class="g-btn g-btn-tertiary">See Menu</a>
+	<?php
+
+	$count = 0;
+
+	$value = get_field( "slider_title" );
+
+	// check if the repeater field has rows of data
+	if( have_rows('home_slider') ):
+
+	 	// loop through the rows of data
+	    while ( have_rows('home_slider') ) : the_row();
+
+	        ?>
+
+	        <div class="slider slide-<?php echo $count; if($count===0){ echo ' active';}?>" style="background-image: url('<?php echo the_sub_field('slider_image') ?>')">
+				<div class="slider-content-container">
+					<div class="slider-content">
+					<?php if(get_sub_field('slider_title')){ ?>
+						<h1><?php echo the_sub_field('slider_title') ?></h1>
+					<?php } ?>
+					<?php if(get_sub_field('slider_sub_title')){ ?>
+						<h2><?php echo the_sub_field('slider_sub_title') ?></h2>
+					<?php } ?>
+					<?php if(get_sub_field('button_link') && get_sub_field('button_label')){ ?>
+						<a href="<?php echo the_sub_field('button_link'); ?>" class="g-btn g-btn-tertiary"><?php echo the_sub_field('button_label') ?></a>
+					<?php } ?>
+					</div>
 				</div>
 			</div>
 
-		</div>
+	<?php $count ++;
 
-		<div class="slider-nav">
-			<a class="active" data-slide="1"></a>
-			<a data-slide="2"></a>
-			<a data-slide="3"></a>
-		</div>
+	    endwhile;
 
-		<div class="slider-arrows-container right">
-			<div class="slider-arrows">
-				<a class="right ion-arrow-right-c"></a>
-			</div>
-		</div>
+	endif;
 
-		<div class="slider-arrows-container left">
-			<div class="slider-arrows">
-				<a class="left ion-arrow-left-c"></a>
-			</div>
-		</div>
+?>
 
+</div>
+
+<div class="slider-nav">
+	<?php
+	for ($x = 0; $x < $count; $x++) { 
+		if($x===0){ 
+			$class = 'active';
+		}else{
+			$class = ' ';
+		}
+		?>
+		<a class="<?php echo $class; ?>" data-slide="slide-<?php echo $x; ?>"></a>
+	<?php } ?>
+</div>
+
+<div class="slider-arrows-container right">
+	<div class="slider-arrows">
+		<a class="right ion-arrow-right-c"></a>
+	</div>
+</div>
+
+<div class="slider-arrows-container left">
+	<div class="slider-arrows">
+		<a class="left ion-arrow-left-c"></a>
+	</div>
+</div>
 
 
 <?php endwhile; ?>
 
-<?php else: ?>
-
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>			
-
 <?php endif; ?>
+
+
+
+
 
 	

@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 }
 
 h1, .h1{
-	font-size: 5em;
+	font-size: 4.5em;
 	font-weight: 700;
 	@media (max-width: $max-break-mobile) {
 		font-size: 3em;

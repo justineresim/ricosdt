@@ -948,7 +948,7 @@ header.header .logo {
   height: 100px;
 }
 header.header .logo img {
-  height: 60px;
+  height: 45px;
   margin: 20px 0;
 }
 @media (max-width: 580px) {
@@ -959,9 +959,6 @@ header.header .logo img {
     height: 30px;
     margin: 20px 0;
   }
-}
-header.header .logo-black {
-  display: none;
 }
 header.header nav.nav {
   float: right;
@@ -975,10 +972,9 @@ header.header nav.nav ul li {
   float: left;
 }
 header.header nav.nav ul li a {
-  font-size: 19px;
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
-  text-shadow: 1px 1px 2px #333;
   display: block;
   padding: 30px 0px 10px 0px;
   margin-left: 50px;
@@ -988,9 +984,12 @@ header.header nav.nav ul li a:hover {
 }
 @media (max-width: 580px) {
   header.header nav.nav ul li a {
-    line-height: 70px;
-    padding: 0 15px;
+    margin-left: 20px;
+    font-size: 15px;
   }
+}
+header.header nav.nav ul li:first-child a {
+  margin-left: 0px;
 }
 
 body.home {
@@ -1094,6 +1093,13 @@ body.home .slider {
   top: 0;
   bottom: 0;
   width: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 300ms ease-in;
+}
+body.home .slider.active {
+  opacity: 1;
+  z-index: 10;
 }
 body.home .slider-content-container {
   position: relative;
@@ -1106,18 +1112,27 @@ body.home .slider-content-container .slider-content {
   vertical-align: middle;
   text-align: center;
   padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 body.home .slider-content-container .slider-content h1, body.home .slider-content-container .slider-content h2 {
   color: #fff;
   text-shadow: 1px 1px 3px #333;
-  max-width: 600px;
+  max-width: 750px;
   margin: 0px auto;
+}
+@media (max-width: 920px) {
+  body.home .slider-content-container .slider-content h1, body.home .slider-content-container .slider-content h2 {
+    max-width: 600px;
+  }
 }
 body.home .slider-content-container .slider-content h2 {
   font-size: 20px;
   margin-bottom: 20px;
+  margin-top: 5px;
 }
 body.home .slider-nav {
+  z-index: 100;
   position: absolute;
   bottom: 120px;
   width: 100%;
@@ -1135,6 +1150,7 @@ body.home .slider-nav a:hover, body.home .slider-nav a.active {
   background-color: #fff;
 }
 body.home .slider-arrows-container {
+  z-index: 100;
   position: absolute;
   display: table;
   width: 100px;
@@ -1153,14 +1169,30 @@ body.home .slider-arrows-container .slider-arrows a {
   color: rgba(255, 255, 255, 0.6);
   font-size: 40px;
 }
+@media (max-width: 580px) {
+  body.home .slider-arrows-container .slider-arrows a {
+    padding: 10px;
+    font-size: 30px;
+  }
+}
 body.home .slider-arrows-container .slider-arrows a:hover {
   color: #fff;
 }
 body.home .slider-arrows-container .slider-arrows a.right:hover {
   padding-right: 25px;
 }
+@media (max-width: 580px) {
+  body.home .slider-arrows-container .slider-arrows a.right:hover {
+    padding-right: 10px;
+  }
+}
 body.home .slider-arrows-container .slider-arrows a.left:hover {
   padding-left: 25px;
+}
+@media (max-width: 580px) {
+  body.home .slider-arrows-container .slider-arrows a.left:hover {
+    padding-left: 10px;
+  }
 }
 body.home .slider-arrows-container.right {
   text-align: right;
@@ -1251,7 +1283,7 @@ h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:h
 }
 
 h1, .h1 {
-  font-size: 5em;
+  font-size: 4.5em;
   font-weight: 700;
 }
 @media (max-width: 580px) {
@@ -1981,7 +2013,7 @@ aside.sidebar h3 {
   .container .main-sidebar {
     width: 100%;
     float: none;
-    border-top: 2px solid #656565;
+    border-top: 2px solid #bf721e;
     margin-top: 4em;
   }
 }

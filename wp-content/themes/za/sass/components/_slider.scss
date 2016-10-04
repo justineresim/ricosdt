@@ -10,6 +10,13 @@ body.home{
 		top: 0;
 		bottom: 0;
 		width: 100%;
+		opacity: 0;
+		z-index: 1;
+		transition: opacity 300ms ease-in;
+		&.active{
+			opacity: 1;
+			z-index: 10;
+		}
 	}
 	.slider-content-container{
 		position: relative;
@@ -21,19 +28,26 @@ body.home{
 			vertical-align: middle;
 			text-align: center;
 			padding-bottom: 100px;
+			padding-left: 20px;
+			padding-right: 20px;
 			h1, h2{
 				color: #fff;
 				text-shadow: 1px 1px 3px #333;
-			    max-width: 600px;
+			    max-width: 750px;
     			margin: 0px auto;
+    			@media (max-width: $max-break-tablet) {
+    				max-width: 600px;
+    			}
 			}
 			h2{
 				font-size: 20px;
 				margin-bottom: 20px;
+				margin-top: 5px;
 			}
 		}
 	}
 	.slider-nav{
+		z-index: 100;
 		position: absolute;
 		bottom: 120px;
 		width: 100%;
@@ -51,6 +65,7 @@ body.home{
 		}
 	}
 	.slider-arrows-container{
+		z-index: 100;
 		position: absolute;
 		display: table;
 		width: 100px;
@@ -66,17 +81,27 @@ body.home{
 				padding: 30px;
 				color: rgba(255,255,255,.6);
 				font-size: 40px;
+				@media (max-width: $max-break-mobile) {
+					padding: 10px;
+					font-size: 30px;
+				}
 				&:hover{
 					color: #fff;
 				}
 				&.right{
 					&:hover{
 						padding-right: 25px;
+						@media (max-width: $max-break-mobile) {
+							padding-right: 10px;
+						}
 					}
 				}
 				&.left{
 					&:hover{
 						padding-left: 25px;
+						@media (max-width: $max-break-mobile) {
+							padding-left: 10px;
+						}
 					}
 				}
 			}	
