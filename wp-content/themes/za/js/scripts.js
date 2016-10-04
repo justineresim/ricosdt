@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
 
 	'use strict';
 
+	//MENU
 	$('.secondary-menu a').click(function(e){
 		$(this).addClass('active');
 		$(this).siblings().removeClass('active');
@@ -12,6 +13,7 @@ jQuery(document).ready(function($) {
 		$(el).siblings().removeClass('active');
 	});
 
+	//HOMEPAGE
 	$('.slider-nav a').click(function(){
 		console.log('asd');
 		var slide = '.' + $(this).data('slide');

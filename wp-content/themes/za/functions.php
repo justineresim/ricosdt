@@ -27,10 +27,9 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('large', 900, '', true); // Large Thumbnail
+    add_image_size('medium', 600, '', true); // Medium Thumbnail
+    add_image_size('small', 300, '', true); // Small Thumbnail
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -173,22 +172,12 @@ function add_slug_to_body_class($classes)
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {
-    // Define Sidebar Widget Area 1
-    register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
         'name' => __('Sidebar Area', 'html5blank'),
         'description' => __('To display on the inner page sidebars', 'html5blank'),
-        'id' => 'widget-area-2',
+        'id' => 'sidebar-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
