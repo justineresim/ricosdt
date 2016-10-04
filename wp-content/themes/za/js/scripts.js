@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 		$(slide).siblings().removeClass('active');
 	});
 
-	$('a.right').click(function(event){
+	function nextSlide(){
 		var slide = $('.slider.active').next('.slider');
 		var nav = $('.slider-nav a.active').next('a');
 		if(slide.length === 0){
@@ -32,9 +32,9 @@ jQuery(document).ready(function($) {
 		$(nav).siblings().removeClass('active');
 		$(slide).addClass('active');
 		$(slide).siblings().removeClass('active');
-	})
+	}
 
-	$('a.left').click(function(event){
+	function prevSlide(){
 		var slide = $('.slider.active').prev('.slider');
 		var nav = $('.slider-nav a.active').prev('a');
 		if(slide.length === 0){
@@ -45,7 +45,18 @@ jQuery(document).ready(function($) {
 		$(nav).siblings().removeClass('active');
 		$(slide).addClass('active');
 		$(slide).siblings().removeClass('active');
+	}
+
+	$('a.right').click(function(event){
+		nextSlide();
 	})
+
+	$('a.left').click(function(event){
+		prevSlide();
+	})
+
+	$( ".slider " ).on( "swipeleft", nextSlide );
+	$( ".slider " ).on( "swiperight", prevSlide );
 	
 });
 
