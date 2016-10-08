@@ -428,7 +428,7 @@ body {
   font-weight: 300;
   padding: 0;
   margin: 0;
-  background: #fbfbfb;
+  background: #f7f7f7;
 }
 body b, body strong {
   font-weight: 500;
@@ -490,6 +490,14 @@ ul li, ol li {
 }
 ul ul, ul ol, ol ul, ol ol {
   margin: 0.5em 0 0 0;
+}
+
+.g-icon-left {
+  margin-right: .3em;
+}
+
+.g-icon-right {
+  margin-left: .3em;
 }
 
 /* ==========================================================================
