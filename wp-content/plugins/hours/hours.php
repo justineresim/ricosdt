@@ -98,12 +98,17 @@ class My_Widget extends WP_Widget {
 		}
 		if ( ! empty( $instance['sun'] ) ) {
 			echo '<div class="sun">';
-			echo '<div>';
 			echo '<div class="day-label">Sunday:</div>';
 			echo '<div class="day-hours">';
 			echo $instance['sun'];
 			echo '</div>';
 			echo '</div>';
+		}
+
+		if ( ! empty( $instance['notes'] ) ) {
+			echo '<div><br><em>';
+			echo $instance['notes'];
+			echo '</em></div>';
 		}
 
 		echo '</div></div>';
@@ -146,6 +151,9 @@ class My_Widget extends WP_Widget {
 		if ( isset( $instance[ 'sun' ] ) ) {
 			$sun = $instance[ 'sun' ];
 		}
+		if ( isset( $instance[ 'notes' ] ) ) {
+			$notes = $instance[ 'notes' ];
+		}
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
@@ -180,6 +188,10 @@ class My_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'sun' ); ?>"><?php _e( 'Sunday:' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'sun' ); ?>" name="<?php echo $this->get_field_name( 'sun' ); ?>" type="text" value="<?php echo esc_attr( $sun ); ?>">
 		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'notes' ); ?>"><?php _e( 'Notes:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'notes' ); ?>" name="<?php echo $this->get_field_name( 'notes' ); ?>" type="text" value="<?php echo esc_attr( $notes ); ?>">
+		</p>
 		<?php 
 	}
 	/**
@@ -202,6 +214,7 @@ class My_Widget extends WP_Widget {
 		$instance['fri'] = ( ! empty( $new_instance['fri'] ) ) ? strip_tags( $new_instance['fri'] ) : '';
 		$instance['sat'] = ( ! empty( $new_instance['sat'] ) ) ? strip_tags( $new_instance['sat'] ) : '';
 		$instance['sun'] = ( ! empty( $new_instance['sun'] ) ) ? strip_tags( $new_instance['sun'] ) : '';
+		$instance['notes'] = ( ! empty( $new_instance['notes'] ) ) ? strip_tags( $new_instance['notes'] ) : '';
 		return $instance;
 	}
 } // class My_Widget
