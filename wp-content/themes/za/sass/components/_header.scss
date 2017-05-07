@@ -13,15 +13,14 @@ header.header{
 	.logo{
 		float: left;
 		height: 100px;
+		margin-top: 10px;
 		img{
-			height: 45px;
-			margin: 20px 0;
+			height: 80px;
 		}
 		@media (max-width: $max-break-mobile) {
 			height: 70px;
 			img{
-				height: 30px;
-				margin: 20px 0;
+				height: 50px;
 			}
 		}
 	}
@@ -69,5 +68,8 @@ body.home{
 		position: fixed;
 		bottom: 0;
 		width: 100%;
+		.logo{
+			margin-top: 0;
+		}
 	}
 }

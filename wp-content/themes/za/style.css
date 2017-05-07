@@ -954,18 +954,17 @@ header.header {
 header.header .logo {
   float: left;
   height: 100px;
+  margin-top: 10px;
 }
 header.header .logo img {
-  height: 45px;
-  margin: 20px 0;
+  height: 80px;
 }
 @media (max-width: 580px) {
   header.header .logo {
     height: 70px;
   }
   header.header .logo img {
-    height: 30px;
-    margin: 20px 0;
+    height: 50px;
   }
 }
 header.header nav.nav {
@@ -1011,6 +1010,9 @@ body.home header.header {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+body.home header.header .logo {
+  margin-top: 0;
 }
 
 /* ==========================================================================
